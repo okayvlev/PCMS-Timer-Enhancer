@@ -5,12 +5,16 @@
     "manifest_version": 2,
     "permissions": [
         "tabs",
-        "*://*.neerc.ifmo.ru/pcms2client/*",
+        "*://neerc.ifmo.ru/pcms2client/*",
+        "*://pcms.itmo.ru/pcms2client/*",
         "storage"
     ],
     "content_scripts": [
         {
-          "matches": ["*://*.neerc.ifmo.ru/pcms2client/*"],
+          "matches": [
+              "*://neerc.ifmo.ru/pcms2client/*",
+              "*://pcms.itmo.ru/pcms2client/*"
+          ],
           "js": ["scripts/script.js"]
         }
     ],
